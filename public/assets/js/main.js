@@ -290,20 +290,20 @@ socket.on('game_update', (payload) =>{
 
 
   if(my_color === 'white') {
-    $("#my_color").html('<h3 id="my_color">I am white</h3>');
+    $("#my_color").html('<h3 id="my_color">I play white chips</h3>');
   }
   else if(my_color === 'black') {
-    $("#my_color").html('<h3 id="my_color">I am black</h3>');
+    $("#my_color").html('<h3 id="my_color">I play black chips</h3>');
   }
   else {
     $("#my_color").html('<h3 id="my_color">Error: I don\'t know what color I am</h3>');
   }
 
   if(payload.game.whose_turn === 'white') {
-    $("#my_color").append('<h4>It is white\'s turn</h4>');
+    $("#my_color").append('<div class="row m-3 align-items-center"><div class="col-4 text-end"><h4>It is white\'s turn</h4></div><div class="col-8 text-center progress"><div id="elapsed" class="progress-bar progress-bar-animated progress-bar-striped bg-success" role="progressbar" style="width:0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div></div>');
   }
   else if(payload.game.whose_turn === 'black') {
-    $("#my_color").append('<h4>It is black\'s turn</h4>');
+    $("#my_color").append('<div class="row m-3 align-items-center"><div class="col-4 text-end"><h4>It is black\'s turn</h4></div><div class="col-8 text-center progress"><div id="elapsed" class="progress-bar progress-bar-animated progress-bar-striped bg-success" role="progressbar" style="width:0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div> ');
   }
   else {
     $("#my_color").append('<h4>Error: I don\'t know whose turn it is</h4>');
@@ -471,7 +471,7 @@ $( () => {
   socket.emit('join_room',request);
 
   $('#lobbyTitle').html(username+"'s Lobby");
-  $("#quit").html("<a href='lobby.html?username="+username+"' class='btn btn-danger' role='button'>Quit</a>");
+  $("#quit").html("<a href='lobby.html?username="+username+"' class='btn btn-danger' role='button'>quit</a>");
 
   $('#chatMessage').keypress(function (e) {
     let key = e.which;

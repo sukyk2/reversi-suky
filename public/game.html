@@ -26,13 +26,17 @@
         </div>
       </div>
 
-      <div class="row m-3">
+      <div class="row m-3 align-items-start">
         <div class="col-md-8 text-center justify-content-center">
           <h3 id="my_color">My Color</h3><br/>
+          <!-- commenting this out
           <div class="text-center progress">
+
             <div id="elapsed" class="progress-bar progress-bar-animated progress-bar-striped bg-success " role="progressbar" style="width:0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             </div>
+
           </div>
+          -->
           <img class="img-fluid" src="assets/images/empty_to_white.gif" alt="White Score"/>
           <span id="whitesum">White Sum</span>
           <span id="vs">vs</span>
@@ -40,8 +44,40 @@
           <img class="img-fluid" src="assets/images/empty_to_black.gif" alt="Black Score"/>
         </div>
         <div class="col-md-4 text-end justify-content-end">
-          <div id="quit">Quit Button</div>
+          <div class="row">
+            <div class="col-md-10">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-success btn-default text-nowrap" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Rules
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Game Rules</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <ul>
+                      <li>Each player starts with 2 chips on the board</li>
+                      <li>Legal moves are highlighted when it's your turn to play. Make a straight line (vertical, horizontal, or diagonal) with any of your existing chips!<br> <img src="assets/images/possible.png" width="120"></li>
+                      <li>Play always alternates between the two players.</li>
+                      <li>The player with the most pieces on the board at the end of the game wins!</li>
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Got It!</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End modal -->
+          </div>
+          <div class="col-md-2" id="quit">Quit Button</div>
         </div>
+      </div>
       </div>
 
       <div class="row m-3">

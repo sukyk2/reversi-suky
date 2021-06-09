@@ -1,9 +1,18 @@
 body {
-  background-color: rgb(177,224,177);
+  background-color: #DBF4EB;
 }
 
-.headerrow, #messagePane {
-  background-color: rgb(224,243,224);
+.headerrow {
+    background-color: #41816A;
+    color: #FFFFFF;
+}
+
+#messagePane {
+  background-color: #FFFFFF;
+}
+
+.btn-primary {
+  background-color: #5D4181;
 }
 
 .join_room_response, .left_room_response {
